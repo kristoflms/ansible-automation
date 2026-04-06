@@ -1,0 +1,12 @@
+---
+- name: Copy files over
+  hosts: rocky
+  become: true
+  tasks:
+    - name: Copy files over to Rocky hosts
+      ansible.builtin.copy:
+        src: ./files/
+        dest: /tmp/files/
+        owner: root
+        group: root
+        mode: '0755'

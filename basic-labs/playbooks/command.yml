@@ -1,0 +1,10 @@
+- name: Ping all hosts
+  hosts: all
+  gather_facts: true
+  tasks:
+    - name: Excute a command
+      ansible.builtin.command: "date"
+      register: output
+    - name: Print Output
+      debug:
+        var: output.stdout

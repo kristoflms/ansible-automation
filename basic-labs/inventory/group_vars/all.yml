@@ -1,0 +1,5 @@
+---
+splunk_rpm_link: "https://download.splunk.com/products/splunk/releases/10.2.2/linux/splunk-10.2.2-80b90d638de6.x86_64.rpm"
+dns_servers:
+  - 8.8.8.8
+  - 8.8.4.4

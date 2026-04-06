@@ -1,0 +1,14 @@
+---
+- name: Configure DNS
+  hosts: ROCKY1
+  become: true
+  tasks:
+    - name: Set DNS servers
+      community.general.nmcli:
+        conn_name: "{{ nc_name }}"
+        type: ethernet
+        dns4:
+          - 8.8.8.8
+          - 4.4.4.4
+        dns4_ignore_auto: yes
+        state: present

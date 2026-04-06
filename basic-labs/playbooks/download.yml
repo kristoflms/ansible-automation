@@ -1,0 +1,10 @@
+---
+- name: Download Splunk RPM
+  hosts: ROCKY1
+  gather_facts: true
+  tasks:
+    - name: "Download RPM from Splunk's website"
+      ansible.builtin.get_url:
+        url: "{{ splunk_rpm_link }}"
+        dest: /var/tmp/splunk.rpm
+        mode: '700'

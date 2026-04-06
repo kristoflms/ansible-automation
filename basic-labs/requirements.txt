@@ -1,0 +1,29 @@
+# Core Ansible engine
+ansible-core>=2.16,<2.18
+
+# SSH + network communication
+paramiko>=3.0.0
+
+# Faster SSH backend
+ansible-pylibssh>=1.0.0
+
+# Required by many network modules
+netaddr>=0.8.0
+
+# REST/API communication
+requests>=2.28.0
+
+# JSON parsing enhancements
+jmespath>=1.0.0
+
+# YAML parsing
+PyYAML>=6.0
+
+# Templating
+jinja2>=3.1.0
+
+# Optional but useful
+napalm>=4.0.0
+textfsm>=1.1.0
+pyats>=23.0
+genie>=23.0

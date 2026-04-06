@@ -1,0 +1,42 @@
+# requirements.yml
+#
+# Install with:
+# ansible-galaxy collection install -r requirements.yml
+
+collections:
+
+  # Core Ansible network modules (connection plugins, cli_config, etc.)
+  - name: ansible.netcommon
+    version: ">=5.0.0"
+
+  # Utilities (useful filters, helpers)
+  - name: ansible.utils
+    version: ">=2.10.0"
+
+  # Cisco IOS (routers + some switching features)
+  - name: cisco.ios
+    version: ">=5.0.0"
+
+  # Cisco NX-OS (optional but useful if you go DC/Nexus later)
+  - name: cisco.nxos
+    version: ">=5.0.0"
+
+  # Aruba AOS-CX (VERY important for your setup)
+  - name: arubanetworks.aoscx
+    version: ">=4.0.0"
+
+  # Linux/Unix systems management
+  - name: ansible.posix
+    version: ">=1.5.0"
+
+  # General-purpose modules (files, APIs, etc.)
+  - name: community.general
+    version: ">=8.0.0"
+
+  # Network vendor-neutral modules (napalm, etc.)
+  - name: community.network
+    version: ">=5.0.0"
+
+  # Splunk Enterprise
+  - name: splunk.enterprise
+    version: "1.0.0"

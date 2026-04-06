@@ -1,0 +1,13 @@
+---
+- name: Using a j2 template
+  become: true
+  gather_facts: true
+  hosts: ubuntu
+  tasks:
+    - name: Template a file to /etc/file.conf
+      ansible.builtin.template:
+        src: ./templates/file.j2
+        dest: /etc/file.conf
+        owner: root
+        group: root
+        mode: '0644'
